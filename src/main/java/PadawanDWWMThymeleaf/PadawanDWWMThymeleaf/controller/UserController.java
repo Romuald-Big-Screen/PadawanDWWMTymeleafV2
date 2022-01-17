@@ -28,9 +28,16 @@ public class UserController {
     public ModelAndView home(Model model) {
 
 
+
         return new ModelAndView("index");
     }
 
+    @RequestMapping("/result")
+    public String result(Model model)
+    {
+        model.addAttribute("users", userService.getUsers());
+        return "result";
+    }
 
 
     @RequestMapping(value = "/registration", method = RequestMethod.POST)

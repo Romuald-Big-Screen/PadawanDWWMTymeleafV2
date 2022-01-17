@@ -72,17 +72,25 @@
                     </div>
 
                     <div class="row justify-content-start" style="padding-top:10px;">
-                        <a href=""></a>
+                        <table class="table">
+                            <thead>
+                            <tr>
 
+                                <th>Last Name</th>
+
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr th:each="user : ${users}">
+
+                                <td th:text="${user.setLastName}">Last Name</td>
+
+                            </tr>
+                            </tbody>
+                        </table>
 
                     </div>
-                    <div class="row justify-content-start" style="padding-top:10px;">
 
-                        <div class="col" style="padding-top:10px;">
-                            <a href=""></a>
-
-
-                        </div>
                         <div class="col" style="padding-top:10px;">
                             <input class="form-control"></input>
 
