@@ -2,9 +2,9 @@ package PadawanDWWMThymeleaf.PadawanDWWMThymeleaf.service;
 
 
 
-import PadawanDWWMThymeleaf.PadawanDWWMThymeleaf.model.Account;
+
 import PadawanDWWMThymeleaf.PadawanDWWMThymeleaf.model.User;
-import PadawanDWWMThymeleaf.PadawanDWWMThymeleaf.repository.AccountRepository;
+
 import PadawanDWWMThymeleaf.PadawanDWWMThymeleaf.repository.UserRepository;
 import PadawanDWWMThymeleaf.PadawanDWWMThymeleaf.service.form.RegistrationForm;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,9 +31,7 @@ public class UserService {
         user.setUseName(form.getUseName());
         user.setAddress(form.getAddress());
         user.setEmail(form.getEmail());
-        Account account = new Account();
-        account.setAmount(0.0);
-        user.setAccount(account);
+
         user.setPassword(passwordEncoder.encode(form.getPassword()));
 
         return userRepository.save(user);

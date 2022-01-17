@@ -21,9 +21,6 @@ public class User {
     @Column(unique = true)
     private String email;
     private String password;
-    @ManyToMany
-    private List<Connection> connections;
-    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    private Account account;
+
 
 }
