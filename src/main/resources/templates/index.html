@@ -1,7 +1,7 @@
 
 
       <!doctype html>
-      <html lang="en">
+      <html lang="fr" xmlns:th="http://www.w3.org/1999/xhtml">
 
       <head>
         <title>index</title>
@@ -37,56 +37,108 @@
               <a class="py-2 text-dark text-decoration-none" href="/paymybuddy/logout">Log off </a>
             </nav>
           </header>
-          <div class="box">
+            <!DOCTYPE html>
+            <html lang="en">
 
-            <div class="selected"><a href="connection"><button class="btn btn-lg btn-primary btn-block">add a connection</button></a></div>
+            <head>
+                <meta name="viewport" content="width=device-width" />
+                <title>HTML Result</title>
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+                      integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+                <link href="index.css" rel="stylesheet">
+                <script src='cours.js' async></script>
+            </head>
 
-          </div>
-
-
-          <div class="flex">
-
-            </br>
-            <h4> Send money
-            </h4>
+            <body>
+            <div class="container body-content">
 
 
 
 
-              <main>
-                </br>
-                <h2 class="display-6 text-left mb-4">My transactions</h2>
+                <div class="container">
 
-                <div class="table-responsive">
-                  <table class="table text-center">
-                    <thead>
-                      <tr >
-                        <th>Connection</th>
-                        <th>Connection name</th>
-                        <th>Amount</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                        <c:forEach items="${transfers}" var="transfer">
-                                              <tr>
-                                              <td>${transfer.to.email} </td>
-                                              <td> ${transfer.to.firstName} ${transfer.to.lastName}</td>
-                                              <td> ${transfer.amountBeforeFee} €</td>
-                                              </tr>
-                                               </c:forEach>
-                    </tbody>
-                  </table>
+
+                    <div class="row justify-content-start" style="padding-top:10px;">
+
+                        <div class="col" style="padding-top:10px;">
+                            <img src="en-tete-mini.png" alt="Dictature Française">
+                        </div>
+
+                        <div class="col" style="padding-top:40px;">
+                            <h1 class="font-weight-bold border">Dossier Professionnel <small>(DP)</small></h1>
+
+                        </div>
+
+
+                    </div>
+                    <div class="row justify-content-start">
+                        <div class="col-3"></div>
+                        <div class="col-9 ligne">
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-start" style="padding-top:10px;">
+                        <a href=""></a>
+
+
+                    </div>
+                    <div class="row justify-content-start" style="padding-top:10px;">
+
+                        <div class="col" style="padding-top:10px;">
+                            <a href=""></a>
+
+
+                        </div>
+                        <div class="col" style="padding-top:10px;">
+                            <input class="form-control"></input>
+
+
+                        </div>
+                    </div>
+                    <div class="row justify-content-start" style="padding-top:10px;">
+
+                        <div class="col" style="padding-top:10px;">
+                            <label></label>
+
+
+
+                        </div>
+                        <div class="col" style="padding-top:10px;">
+                            <label><input type="checkbox" /> </label>
+
+
+                        </div>
+                    </div>
+                    <div class="row justify-content-center" style="padding-top:10px;">
+                        <label></label>
+
+
+
+                    </div>
+                    <div class="row justify-content-center" style="padding-top:10px;">
+                        <label></label>
+
+
+
+                    </div>
+                    <div class="row justify-content-start" style="padding-top:10px;">
+                        <label></label>
+
+
+
+                    </div>
+                    <div class="row justify-content-center" style="padding-top:10px;">
+                        <label><input type="checkbox" /> </label>
+
+
+                    </div>
+
+
                 </div>
-              </main>
 
-              <footer class="pt-4 my-md-5 pt-md-5 border-top">
 
-              </footer>
+
             </div>
-          </div>
-        </div>
+            </body>
 
-      </body>
-
-
-      </html>
+            </html>
