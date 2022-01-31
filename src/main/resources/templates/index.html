@@ -72,20 +72,21 @@
                     </div>
 
                     <div class="row justify-content-start" style="padding-top:10px;">
-                        <table class="table">
+                        <table>
                             <thead>
                             <tr>
-
-                                <th>Last Name</th>
+                                <th scope="col">Nom</th>
+                                <th scope="col">Prénom</th>
+                                <th scope="col">Addresse</th>
 
                             </tr>
                             </thead>
                             <tbody>
-                            <tr th:each="user : ${users}">
+                            <tr>
+                                <td th:text="${User.lastName}"></td>
+                                <td th:text="${User.firstName}"></td>
+                                <td th:text="${User.address}"></td>
 
-                                <td th:text="${user.setLastName}">Last Name</td>
-
-                            </tr>
                             </tbody>
                         </table>
 

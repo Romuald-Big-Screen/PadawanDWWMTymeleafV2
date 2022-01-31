@@ -2,6 +2,7 @@ package PadawanDWWMThymeleaf.PadawanDWWMThymeleaf.controller;
 
 
 
+import PadawanDWWMThymeleaf.PadawanDWWMThymeleaf.model.User;
 import PadawanDWWMThymeleaf.PadawanDWWMThymeleaf.service.UserService;
 import PadawanDWWMThymeleaf.PadawanDWWMThymeleaf.service.form.LoginForm;
 import PadawanDWWMThymeleaf.PadawanDWWMThymeleaf.service.form.RegistrationForm;
@@ -28,15 +29,7 @@ public class UserController {
     public ModelAndView home(Model model) {
 
 
-
         return new ModelAndView("index");
-    }
-
-    @RequestMapping("/result")
-    public String result(Model model)
-    {
-        model.addAttribute("users", userService.getUsers());
-        return "result";
     }
 
 
@@ -52,7 +45,13 @@ public class UserController {
     }
 
 
+    @GetMapping("/result")
+    public ModelAndView profile(Model model) {
+        User user = userService.findAccount();
+        model.addAttribute("user", user);
 
-
+        return new ModelAndView("result");
+    }
 }
+
 

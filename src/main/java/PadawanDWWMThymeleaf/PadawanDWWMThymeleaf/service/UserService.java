@@ -8,6 +8,7 @@ import PadawanDWWMThymeleaf.PadawanDWWMThymeleaf.model.User;
 import PadawanDWWMThymeleaf.PadawanDWWMThymeleaf.repository.UserRepository;
 import PadawanDWWMThymeleaf.PadawanDWWMThymeleaf.service.form.RegistrationForm;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -41,7 +42,13 @@ public class UserService {
         return userRepository.findAll();
     }
 
+    public User findAccount(){
+        org.springframework.security.core.userdetails.User springUser = (org.springframework.security.core.userdetails.User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        return userRepository.findUserByEmail(springUser.getUsername())
+                .orElseThrow(() -> new RuntimeException("user with email  not found"));
 
+
+    }
 
 
 

@@ -8,22 +8,50 @@
 <body>
 
 <h1>Result</h1>
-<table>
-    <thead>
-    <tr>
+ <h2 class="offset-md-10">Registration</h2>
+        </div>
+    </div>
+    <form th:action="@{/profil}" method="post" th:object="${user}">
+        <input type="hidden" id="id" th:field="*{id}" name="id">
+        <div class="row">
+            <div class="col-md-6 pt-3 ">
+                <label class="control-label offset-md-7" for="firstName"> First Name </label>
+                <input id="firstName" class="form-control offset-md-7" th:field="*{firstName}"
+                       required autofocus="autofocus"/>
+            </div>
+            <div class="col-md-6 pt-3 "></div>
 
-        <th>Last Name</th>
 
-    </tr>
-    </thead>
-    <tbody>
-    <tr th:each="user : ${users}">
+            <div class="col-md-6 pt-3 ">
+                <label class="control-label offset-md-7" for="lastName"> Last Name </label> <input
+                    id="lastName" class="form-control offset-md-7" th:field="*{lastName}"
+                    required autofocus="autofocus"/>
+            </div>
+            <div class="col-md-6 pt-3 "></div>
 
-        <td th:utext="${user.lastName}">Last Name</td>
 
-    </tr>
-    </tbody>
-</table>
+            <div class="col-md-6 pt-3 ">
+                <label class="control-label offset-md-7" for="email"> Email </label>
+                <input id="email" class="form-control offset-md-7" th:field="*{email}" required autofocus="autofocus"/>
+            </div>
+            <div class="col-md-6 pt-3 "></div>
+
+
+            <div class="col-md-6 pt-3 ">
+                <label class="control-label offset-md-7" for="password"> Password </label>
+                <input id="password" class="form-control offset-md-7" type="password"
+                       th:field="*{password}" required autofocus="autofocus"/>
+            </div>
+            <div class="col-md-6 pt-3 "></div>
+
+
+            <div class="col-md-7 pt-3">
+                <button type="submit" class="btn btn-success offset-md-10">Submit</button>
+            </div>
+            <div class="col-md-6 pt-3 "></div>
+
+    </form>
+</div>
 
 </body>
 </html>
